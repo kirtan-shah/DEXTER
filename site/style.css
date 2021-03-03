@@ -4,6 +4,36 @@
     font-family:sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+button {
+    color: antiquewhite;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline:none;
+    cursor: pointer;
+    font-weight:900;
+    transition: 200ms all;
+}
+button:hover {
+    background: white;
+    color: black;
+}
+#sign-up {
+    font-size: 4rem;
+    color: black;
+    border: 1px solid black;
+
+}
+#sign-up:hover {
+    background: lightblue;
+    color: white    ;
+    border: none;
+}
 /*--Trial--*/ 
 
 #header{
@@ -49,16 +79,7 @@ h5{
     align-items: center;
     justify-content: space-between;
 }
-button{
-    color: antiquewhite;
-    padding: 10px 25px;
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    outline:none;
-    cursor: pointer;
-    font-weight:900;
-}
+
 .content{
     color:#fbfcfd;
     position:absolute;
@@ -272,7 +293,7 @@ nav ul li a{
     justify-content: space-around;
     flex-wrap:wrap;
     padding-top:80px;
-    padding-bottom: 400px;
+    padding-bottom: 50px;
     
 }
 .HowTo-col{

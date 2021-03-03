@@ -12,7 +12,11 @@
 
 <body>
  
-    
+    <script>
+        function loginPage() {
+            window.location = "/login/";
+        }
+    </script>
      <section id="header">
          <div class="container">
              <div class= "navbar">
@@ -30,11 +34,11 @@
                
                 <medium>Add Task.  Mark Off.  Enjoy Prize.</medium>
                 <h1> Ocean of tasks. <br>Potential to Finish. <br>Let's Get started!</h1>
-                <button type="button">I'm Ready</button>                
+                <button id="ready-btn" type="button" onclick="loginPage()">I'm Ready</button>                
                 
                 
             </div>
-            <div class="side-bar"> </div>
+            <!-- <div class="side-bar"> </div> -->
             <div class="bubbles">
                 <img src="images/bubble.png">
                 <img src="images/bubble.png">
@@ -166,7 +170,7 @@
             </div>
         </div>
         <div class="HowTo-btn">
-             <button class="common-btn">Sign Up </button>
+             <button id="sign-up" onclick="loginPage()">Sign Up </button>
         </div>
     </section>
     
