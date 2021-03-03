@@ -3,6 +3,16 @@
 
 Servo servo1;
 const int servoPin1 = 16;
+const int initialPos = 70;
+const int finalPos = 30;
+int led1 = 13; //red
+int led2 = 12; //red
+int led3 = 14;//yellow
+int led4 = 27; //yellow
+int led5 = 26; //green
+int led6 = 25; //green
+// keep track of points/ led
+int led_count = 0;
 
 #include "credentials.h"
 
@@ -18,6 +28,7 @@ void setup() {
 
   initServo();
   initWifi();
+  initLED();
 }
 
 void loop() {
@@ -40,14 +51,15 @@ void loop() {
               client.println("Connection: close");
               client.println();
 
-              if(header.indexOf("GET /dispense") >= 0) {
-                dispense();
+              if(header.indexOf("/ledprogress") > 0) {
+                ledProgress();
+                if(led_count == 6) {
+                  dispense();
+                  led_count = 0;
+                }
               }
-              // put the LED code here
-              // /LEDprogress
               
-
-              client.println("<button><a href='/dispense'>Dispense</a></button>");
+              client.println("<button><a href='/ledprogress'>Dispense</a></button>");
               client.println();
               break;
             }
@@ -69,24 +81,58 @@ void loop() {
 
 void dispense() {
   Serial.println("Dispensing...");
-  servo1.write(30);
-  delay(100);
-  servo1.write(-40);
-  delay(250);
-  servo1.write(0);
+  digitalWrite(led1, LOW);
+  delay(400);
+  digitalWrite(led2, LOW);
+  delay(400);
+  digitalWrite(led3, LOW);
+  delay(400);
+  digitalWrite(led4, LOW);
+  delay(400);
+  digitalWrite(led5, LOW);
+  delay(400);
+  digitalWrite(led6, LOW);
+  delay(10);
+  servo1.write(finalPos);
+  delay(300);
+  servo1.write(initialPos);
   delay(150);
 }
 
+
 void ledProgress() {
-  
+  led_count += 1;
+  Serial.print("Progress: ");
+  Serial.println(led_count);
+  if (led_count >= 1) {
+    digitalWrite(led1, HIGH);
+  }
+  if(led_count >= 2) {
+    digitalWrite(led2, HIGH);
+  }
+  if(led_count >= 3) {
+    digitalWrite(led3, HIGH);
+  }
+  if(led_count >= 4) {
+    digitalWrite(led4, HIGH);
+  }
+  if(led_count >= 5) {
+    digitalWrite(led5, HIGH);
+  }
+  if(led_count >= 6) {
+    digitalWrite(led6, HIGH);
+  }
+  delay(400);
 }
 
-//void moveServo(Servo servo, int from, int to, int speed) {
-//  for(int pos = from; pos < to; pos += speed) {
-//    servo.write(pos);
-//    delay(10);
-//  }
-//}
+void initLED() {
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
+  pinMode(led5, OUTPUT);
+  pinMode(led6, OUTPUT);
+}
 
 void initServo() {
   ESP32PWM::allocateTimer(0);
@@ -95,6 +141,7 @@ void initServo() {
   ESP32PWM::allocateTimer(3);
   servo1.setPeriodHertz(50);
   servo1.attach(servoPin1, 500, 2400);
+  servo1.write(initialPos);
 }
 
 void initWifi() {
