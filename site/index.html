@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DEXTER LANDING PAGE</title>
+    <link rel="stylesheet"  type="text/css" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    
+</head>
+
+<body>
+ 
+    
+     <section id="header">
+         <div class="container">
+             <div class= "navbar">
+    
+               
+               
+<h5>D.E.X.T.E.R.</h5>
+               
+            
+            </div>
+            <div class="content">
+                
+                 
+            
+               
+                <medium>Add Task.  Mark Off.  Enjoy Prize.</medium>
+                <h1> Ocean of tasks. <br>Potential to Finish. <br>Let's Get started!</h1>
+                <button type="button">I'm Ready</button>                
+                
+                
+            </div>
+            <div class="side-bar"> </div>
+            <div class="bubbles">
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+                <img src="images/sub.png.png">
+                <img src="images/bubble.png">
+                <!--added-->
+                
+                <img src="images/bubble.png">
+                <img src="images/bubble.png">
+               
+                <!--end of add-->
+             </div>
+         </div>
+     </section>
+      
+
+    
+    <nav id="sideNav"> 
+        <ul>
+            <li><a href="#header"> HOME </a></li>
+            <li><a href="#about"> INTENTIONS</a></li>
+            <li><a href="#HowTo"> HOW TO START</a></li>
+        </ul>
+    </nav>
+   <img src="images/menu.png" id="menuBtn">
+   
+   
+   
+   <!--Trying to Fix side bar dispaly-->
+   
+   
+   <script> 
+       
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+       
+        sideNav.style.display === "none";
+        menuBtn.onclick = function(){
+            if (sideNav.style.display === "none"){
+                sideNav.style.display = "block";
+            }
+            else{
+                sideNav.style.display= "none";
+            }
+        }
+    
+    </script>
+    
+    <!--End of Trying to fix side Bar-->
+        
+    
+    
+    
+    
+    
+    <!--about-->
+    
+    <section id="about">
+           
+           <!--Wave Try-->
+       
+       <div class="about-content">
+           <h2>INTENTIONS</h2>
+           <h2>INTENTIONS</h2>
+       </div>
+       
+       
+       
+       
+       
+       <!--End of Wave Try-->
+        
+        <div class="about-left-col">
+            <img src="images/aboutwave.png">
+        </div>
+        <div class="about-right-col">
+           
+            <div class="about-text">
+                <br><br><br><br><br><br><br><br>
+                <span class="square"> </span>
+                <p> We get you! Gettting work done is hard. Most of time it's simply getting the momentum started that corners  us into Procrastination mode. (We understand!) That's why D.E.X.T.E.R. is here to make it a little bit easier for you. Our intention is to provide a customizable method to write your To-Do list and be rewarded! Yup. The suspense of wanting D.E.X.T.E.R to open up will encourage you to grind. Stay safe and Take care. </p><br>
+                <h3> -D.E.X.T.E.R team</h3>
+                <br>
+                
+                <span class="square"> </span>
+                <h2> I know you have potential. Use it.</h2>
+                <h3>- By someone who cares </h3>
+            </div>
+        
+        </div>
+    </section>
+    <!--How To-->
+    
+    <section id="HowTo">
+     
+     
+     
+      <div class="HowTo-content">
+           <h2>How To Start</h2>
+           <h2>How To Start</h2>
+       </div>
+      
+      
+      
+      
+      
+      
+       
+        <div class="HowTo-row">
+            <div class="HowTo-col">               
+                <img src="images/note.png">
+                <h4>Write your To-Do List</h4>
+                <p>type type type </p>            
+            </div>
+            <div class="HowTo-col">         
+                <img src="images/coin.png">
+                <h4>Earn Points</h4>
+                <p>Yay! Yay! Yay!</p>
+                
+            </div>
+            <div class="HowTo-col">
+               
+                <img src="images/prize.png">
+                <h4>Your Prize Awaits</h4>
+                <p>Yes, you did it!</p>                     
+            </div>
+        </div>
+        <div class="HowTo-btn">
+             <button class="common-btn">Sign Up </button>
+        </div>
+    </section>
+    
+    
+</body>
+</html>

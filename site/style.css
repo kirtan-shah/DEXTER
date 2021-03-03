@@ -1,0 +1,396 @@
+*{ 
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+
+/*--Trial--*/ 
+
+#header{
+   width:100%;
+    height: 100vh;
+    background-image:url(images/785.jpg);
+    background-size:cover;
+    background-position:center;
+    position: relative;
+    overflow:hidden;}
+
+
+
+
+
+
+
+/*--End of Trial--*/
+
+h5{
+    font-size:20px;
+    margin:20px  10px;
+    line-height: 80px;
+    font-family:"Times New Roman";
+    font-weight:300;
+    color: #efce00;
+    }
+
+
+
+
+
+.logo{
+    margin-top:30px;
+    width:100px;
+    cursor:pointer;
+}
+.navbar{
+    width: 85%;
+    height:15%;
+    margin:auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+button{
+    color: antiquewhite;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline:none;
+    cursor: pointer;
+    font-weight:900;
+}
+.content{
+    color:#fbfcfd;
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform:translateY(-50%);
+    z-index:2;
+
+}
+h1{
+    font-size:50px;
+    margin:10px 0 30px;
+    line-height: 70px;
+}
+.side-bar{
+    width:50px;
+    height:100vh;
+    background:linear-gradient(#123D9B,#3069E6,rgb(255, 226, 39));
+    position:absolute;
+    right:0;
+    top:0;
+}
+.menu{
+    display:block;
+    width:25px;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+.bubbles img{
+    width: 50px;
+    animation:bubble 7s linear infinite;
+    bottom: -50px;
+}
+.bubbles{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes bubble{
+    0%{
+        transform:translateY(0)
+            opacity:0;
+    }
+    50%{
+        
+            opacity:1;
+    }
+    70%{
+        
+            opacity:1;
+    }
+    100%{
+        transform:translateY(-85vh);
+            opacity:0;
+    }
+}
+
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+    width:25px;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3s;
+    width:25px;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 3s;
+    width:20px;
+    
+}
+.bubbles img:nth-child(6){
+    animation-delay: 6s;
+    width:500px;
+}
+.bubbles img:nth-child(7){
+    animation-delay: 3s;
+    width:25px;
+}
+
+/*--added bub--*/
+
+.bubbles img:nth-child(8){
+    animation-delay: 2s;
+    
+}
+.bubbles img:nth-child(9){
+    animation-delay: 4s;
+    width:25px;
+}
+
+
+
+
+
+
+
+/*--end of add--*/
+
+
+.square{
+    height:12px;
+    width: 12px;
+    display: inline-block;
+    background:#FAE55F;
+    margin: 15px 0;
+}
+
+
+
+
+#sideNav{
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    background:linear-gradient(rgb(255, 226, 39),#3069E6,#123D9B);
+    z-index:2;
+    transition:.5s;
+    right:0px;
+}
+nav ul li{
+    list-style:none;
+    margin:50px 20px;
+}
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+}
+#menuBtn{
+    width:30px;
+    position: fixed;
+    right:10px;
+    top:35px;
+    z-index:2;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+/*---about---*/
+
+#about{
+    top:2px;
+    padding:10px 0;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    background-color:white;
+}
+.about-left-col{
+    flex-basis:40%;
+}
+
+.about-left-col img{
+    width:115%;
+}
+.about-right-col{
+    flex-basis: 50%;
+    text-align: right;
+}
+.about-text{
+    max-width: 500px;
+    margin-right: 40px;
+    display: inline-block;
+}
+.about-text p{
+    font-style:"Times New Roman";
+    font-size:18px;
+}
+.about-text h2{
+    margin: 50px 0 10px;
+    font-size:28px;
+    font-style: italic;
+}
+.about-text h3{
+    font-size:20px;
+    font-style: italic;
+    color: #3069E6;
+}
+/*---HOW TO---*/
+
+#HowTo{
+    padding-top: 400px 0;
+    padding-bottom: 20px;
+    background-color: #FAE55F;
+    align-items: center;
+}
+
+
+.HowTo-row{
+    width:80%;
+    margin:auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    padding-top:80px;
+    padding-bottom: 400px;
+    
+}
+.HowTo-col{
+    flex-basis:25%;
+    text-align:center;
+    padding-top:80px;
+}
+.HowTo-col img{
+    width: 100px;
+    margin-top: 100px;
+}
+.HowTo-col h4{
+    margin-bottom:15px;
+    font-size:20px;
+    font-weight:400;
+}
+.HowTo-btn{
+    margin:80px auto 0;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    margin:4500px,0px,4px;
+    
+}
+
+
+/*--Trying wave --*/
+.about-content{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    background: #3069E6;
+    position:relative;
+    transform:translateY(-100px);
+    transform:translateX(900px);
+    top:-180px;
+    left:8%;
+    z-index:2;
+    font-family: san-Serif;
+    
+}
+.about-content h2
+{position:absolute;
+color:#fff;
+    transform:translate(-50%,-50%);
+    font-size:80px;
+    left:-70px;
+}
+.about-content h2:nth-child(1)
+{
+    color:transparent;
+    -webkit-text-stroke:2px #3069E6;
+}
+.about-content h2:nth-child(2)
+{
+    color:#3069E6;
+    animation:animate 7s ease-in-out infinite;
+}
+@keyframes animate
+{
+    0%,100%
+    {clip-path: polygon(0 40%, 9% 37%, 19% 41%, 27% 46%, 32% 50%, 40% 54%, 46% 54%, 54% 52%, 62% 50%, 68% 48%, 75% 43%, 84% 40%, 92% 41%, 98% 44%, 100% 46%, 100% 100%, 0 100%);
+        
+    }
+    50%
+    {clip-path: polygon(0 58%, 8% 64%, 16% 67%, 26% 64%, 33% 57%, 38% 53%, 46% 47%, 56% 47%, 62% 50%, 67% 54%, 71% 62%, 77% 63%, 86% 61%, 94% 56%, 100% 46%, 100% 100%, 0 100%);}
+    
+}
+
+/*--End of Trying wave--*/
+
+
+.HowTo-content{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    background: #3069E6;
+    position:relative;
+    transform:translateY(-00px);
+    transform:translateX(500px);
+    top:130px;
+    right:8%;
+    z-index:2;
+ 
+    
+}
+
+.HowTo-content h2
+{position:absolute;
+color:#fff;
+    transform:translate(-50%,-50%);
+    font-size:80px;
+    left:-70px;
+}
+.HowTo-content h2:nth-child(1)
+{
+    color:transparent;
+    -webkit-text-stroke:2px #3069E6;
+}
+.HowTo-content h2:nth-child(2)
+{
+    color:#3069E6;
+    animation:animate 7s ease-in-out infinite;
+}
+@keyframes animate
+{
+    0%,100%
+    {clip-path: polygon(0 40%, 9% 37%, 19% 41%, 27% 46%, 32% 50%, 40% 54%, 46% 54%, 54% 52%, 62% 50%, 68% 48%, 75% 43%, 84% 40%, 92% 41%, 98% 44%, 100% 46%, 100% 100%, 0 100%);
+        
+    }
+    50%
+    {clip-path: polygon(0 58%, 8% 64%, 16% 67%, 26% 64%, 33% 57%, 38% 53%, 46% 47%, 56% 47%, 62% 50%, 67% 54%, 71% 62%, 77% 63%, 86% 61%, 94% 56%, 100% 46%, 100% 100%, 0 100%);}
+    
+}
+
+
+
+
+
+
+
