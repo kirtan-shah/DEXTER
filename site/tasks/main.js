@@ -52,5 +52,9 @@ function render() {
 $(document).ready(function() {
     // addTask("do stuff", 2)
     // addTask("do stuff", 1)
+    addTask("Do Math HW", 2)
+    addTask("Take out Trash", 1)
+    addTask("Run 3 miles", 2)
+    addTask("Study for Physics Test", 1)
     render()
 })
